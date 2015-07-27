@@ -37,7 +37,7 @@ public class WorkflowMessageEntityProvider implements MessageBodyReader<Workflow
 	}
 
 	@Override
-	public long getSize(Object jsonObject, Class<?> type, Type genericType,
+	public long getSize(Object message, Class<?> type, Type genericType,
 			Annotation[] annotations, MediaType mediaType) {
 		return -1;
 	}
