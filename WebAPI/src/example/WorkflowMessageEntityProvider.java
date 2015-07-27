@@ -17,8 +17,8 @@ import javax.ws.rs.ext.MessageBodyWriter;
 @javax.ws.rs.ext.Provider
 @javax.ws.rs.Consumes("application/json")
 @javax.ws.rs.Produces("application/json")
-public class WorkflowMessageEntityProvider implements MessageBodyReader<WorkflowMessage>,
-		MessageBodyWriter<Object> {
+public class WorkflowMessageEntityProvider implements
+		MessageBodyReader<WorkflowMessage>, MessageBodyWriter<Object> {
 
 	@Override
 	public boolean isReadable(Class<?> type, Type genericType,
@@ -27,8 +27,8 @@ public class WorkflowMessageEntityProvider implements MessageBodyReader<Workflow
 	}
 
 	@Override
-	public WorkflowMessage readFrom(Class<WorkflowMessage> type, Type genericType,
-			Annotation[] annotations, MediaType mediaType,
+	public WorkflowMessage readFrom(Class<WorkflowMessage> type,
+			Type genericType, Annotation[] annotations, MediaType mediaType,
 			MultivaluedMap<String, String> httpHeaders, InputStream entityStream)
 			throws IOException {
 		JsonReader reader = Json.createReader(entityStream);
